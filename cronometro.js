@@ -38,7 +38,7 @@ function inicio() {
 
       }
     }
-  },0);
+  },10);
   iniciar.setAttribute("disabled", ""); //desabilita o clicar enqnt o tempo ta rodando
 }
 
