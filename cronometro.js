@@ -19,18 +19,22 @@ function inicio() {
     if(ml === 100){
       ml= 0
       sec++
+      if (sec < 10) sec = "0" + sec;
+
       
     }
     if (sec === 60) {
       sec = 0;
       min++;
+      if (min < 10) min = "0" + min;
+      
       if (min === 60) {
         min = 0;
         hr++;
+
       }
-      if (min < 10) min = "0" + min;
     }
-  }, 10);
+  },10);
   iniciar.setAttribute("disabled", ""); //desabilita o clicar enqnt o tempo ta rodando
 }
 
