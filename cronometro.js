@@ -10,11 +10,17 @@ reset.addEventListener("click", resetarTempo);
 
 let sec = 00;
 let min = 00;
+let ml = 00
 let hr = 00;
 let timer;
 function inicio() {
   timer = setInterval(() => {
-    tempo.innerHTML = hr + ":" + min + ":" + sec++;
+    tempo.innerHTML = hr + ":" + min + ":" + sec + ':' + ml++;
+    if(ml === 100){
+      ml= 0
+      sec++
+      
+    }
     if (sec === 60) {
       sec = 0;
       min++;
@@ -24,7 +30,7 @@ function inicio() {
       }
       if (min < 10) min = "0" + min;
     }
-  }, 1000);
+  }, 10);
   iniciar.setAttribute("disabled", ""); //desabilita o clicar enqnt o tempo ta rodando
 }
 
