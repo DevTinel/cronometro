@@ -24,7 +24,7 @@ function inicio() {
       }
       if (min < 10) min = "0" + min;
     }
-  }, 10);
+  }, 1000);
   iniciar.setAttribute("disabled", ""); //desabilita o clicar enqnt o tempo ta rodando
 }
 
