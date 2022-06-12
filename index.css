@@ -8,7 +8,7 @@
   background-color: black;
   height: 100vh;
 }
-.conometro {
+.cronometro {
   display: flex;
   flex-direction: column;
   width: 70%;
