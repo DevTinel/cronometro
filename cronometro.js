@@ -8,11 +8,11 @@ iniciar.addEventListener("click", inicio);
 pause.addEventListener("click", pararTempo);
 reset.addEventListener("click", resetarTempo);
 
-function doisDig(dig){
-  if(dig < 10){
-    return ('0' + dig)
-  }else{
-    return dig
+function doisDig(dig) {
+  if (dig < 10) {
+    return "0" + dig;
+  } else {
+    return dig;
   }
 }
 let sec = 0;
@@ -23,22 +23,22 @@ let timer;
 
 function inicio() {
   timer = setInterval(() => {
-    tempo.innerHTML = doisDig(hr) + ":" + doisDig(min) + ":" + doisDig(sec) + ':' + ml++;
-    if(ml == 100){
-      ml= 0
-      sec++      
+    tempo.innerHTML =
+      doisDig(hr) + ":" + doisDig(min) + ":" + doisDig(sec) + ":" + ml++;
+    if (ml == 100) {
+      ml = 0;
+      sec++;
     }
     if (sec == 60) {
       sec = 0;
       min++;
-      
+
       if (min == 60) {
         min = 0;
         hr++;
-
       }
     }
-  },10);
+  }, 10);
   iniciar.setAttribute("disabled", ""); //desabilita o clicar enqnt o tempo ta rodando
 }
 
